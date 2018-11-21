@@ -17,9 +17,14 @@ Dataset: [Flickr 8k](https://forms.illinois.edu/sec/1713398)
 4. Evaluation model: [kaggle-kernel](https://www.kaggle.com/damminhtien/evaluate-model)
 5. Generator caption for new images: [kaggle-kernel](https://www.kaggle.com/damminhtien/generation-caption-for-new-image)
 
-Model:
+## Model:
 
-<img src="https://www.kaggleusercontent.com/kf/7180459/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..ihpVJWmKWYb6JH5DhjBKxw.RhZ5JDVUBJMpOzFE_hKuEB9UKlbx3odqB6PL48QTReai3N52qL051YMshVJVa9caz4vdzlj7nRjYjj2U2tjW02uIWKYMlIlq8oos2qeHvulhA6IFRS6etz8pt_tLPfA1GFQj9Gwx9l0oJMtj-4PAag.EhkO-3tycdtgGgSr-sQaDA/model.png" />
+<p align="center">
+  <img src="https://www.kaggleusercontent.com/kf/7180459/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..ihpVJWmKWYb6JH5DhjBKxw.RhZ5JDVUBJMpOzFE_hKuEB9UKlbx3odqB6PL48QTReai3N52qL051YMshVJVa9caz4vdzlj7nRjYjj2U2tjW02uIWKYMlIlq8oos2qeHvulhA6IFRS6etz8pt_tLPfA1GFQj9Gwx9l0oJMtj-4PAag.EhkO-3tycdtgGgSr-sQaDA/model.png" />
+</p>
 
-Result:
-<img src="https://i.imgur.com/uFE7Hkn.png" >
+## Result:
+
+<p align="center">
+  <img src="https://i.imgur.com/uFE7Hkn.png" />
+</p>
