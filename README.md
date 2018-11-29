@@ -1,13 +1,12 @@
 # Deep-Learning-Photo-Caption-Generator
 > ## Deep Visual-Semantic Alignments for Generating Image Descriptions :smiling_imp:
 
-BLEU-1: 0.506709
-
-BLEU-2: 0.265901
-
-BLEU-3: 0.182500
-
-BLEU-4: 0.085222
+## Idea:
+* Combine CNN with LSTM
+* Deep CNN as encoder
+* Language LSTM as decoder
+* End-to-end model I -> S
+* Maximize P(S|I)
 
 Dataset: [Flickr 8k](https://forms.illinois.edu/sec/1713398)
 
@@ -20,10 +19,18 @@ Dataset: [Flickr 8k](https://forms.illinois.edu/sec/1713398)
 ## Model:
 
 <p align="center">
-  <img src="https://www.kaggleusercontent.com/kf/7180459/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..ihpVJWmKWYb6JH5DhjBKxw.RhZ5JDVUBJMpOzFE_hKuEB9UKlbx3odqB6PL48QTReai3N52qL051YMshVJVa9caz4vdzlj7nRjYjj2U2tjW02uIWKYMlIlq8oos2qeHvulhA6IFRS6etz8pt_tLPfA1GFQj9Gwx9l0oJMtj-4PAag.EhkO-3tycdtgGgSr-sQaDA/model.png" />
+  <img src="https://i.imgur.com/1DxxbyK.png" />
 </p>
 
 ## Result:
+
+BLEU-1: 0.506709
+
+BLEU-2: 0.265901
+
+BLEU-3: 0.182500
+
+BLEU-4: 0.085222
 
 <p align="center">
   <img src="https://i.imgur.com/uFE7Hkn.png" />
