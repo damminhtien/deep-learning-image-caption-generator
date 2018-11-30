@@ -1,12 +1,19 @@
-# Deep-Learning-Photo-Caption-Generator
+# Deep Learning Image Caption Generator
 > ## Deep Visual-Semantic Alignments for Generating Image Descriptions :smiling_imp:
 
-## Idea:
+## Main Idea:
 * Combine CNN with LSTM
 * Deep CNN as encoder
 * Language LSTM as decoder
 * End-to-end model I -> S
 * Maximize P(S|I)
+
+## Tuning:
+> ### Encoder CNN:
+* VGG16: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model)
+* Resnet50: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-resnet50)
+* **Densenet121**: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-densenet121)
+* Inceptionv3: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-inceptionv3)
 
 Dataset: [Flickr 8k](https://forms.illinois.edu/sec/1713398)
 
