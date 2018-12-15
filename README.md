@@ -1,5 +1,6 @@
 # Deep Learning Image Caption Generator
 > ## Deep CNN-LSTM for Generating Image Descriptions :smiling_imp:
+**Key words**: Image captioning, deep learning, lstm, cnn, word by word, word embeding.
 
 #### Abstract
 Image captioning is a very interesting problem in machine learning. With the development of deep neural network, deep learning approach is the state of the art of this problem. The main mission of image captioning is to automatically generate an image's description, which requires our understanding about content of images. There are some end-to-end models which were introduced such as: GoogleNIC ([show and tell](https://arxiv.org/pdf/1411.4555.pdf)), MontrealNIC ([show attend and tell](https://arxiv.org/pdf/1502.03044.pdf)), [LRCN](https://arxiv.org/pdf/1411.4389.pdf), [mRNN](https://arxiv.org/pdf/1410.1090.pdf)... Simplified from GoogleNIC, our model uses ConvNet as the image encoder and LSTM as the language decoder with few layers, which reduces computational cost compared with above models and is suitable for students whose limited resources.
