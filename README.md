@@ -1,19 +1,20 @@
 # Deep Learning Image Caption Generator
 > ## Deep CNN-LSTM for Generating Image Descriptions :smiling_imp:
-**Key words**: Image captioning, deep learning, lstm, cnn, word by word, word embeding.
+**Key words**: Image captioning, image description generator, explain image, merge model, deep learning, lstm, rnn, cnn, word by word, word embeding.
 
 #### Abstract
-Image captioning is a very interesting problem in machine learning. With the development of deep neural network, deep learning approach is the state of the art of this problem. The main mission of image captioning is to automatically generate an image's description, which requires our understanding about content of images. There are some end-to-end models which were introduced such as: GoogleNIC ([show and tell](https://arxiv.org/pdf/1411.4555.pdf)), MontrealNIC ([show attend and tell](https://arxiv.org/pdf/1502.03044.pdf)), [LRCN](https://arxiv.org/pdf/1411.4389.pdf), [mRNN](https://arxiv.org/pdf/1410.1090.pdf)... Simplified from GoogleNIC, our model uses ConvNet as the image encoder and LSTM as the language decoder with few layers, which reduces computational cost compared with above models and is suitable for students whose limited resources.
+Image captioning is a very interesting problem in machine learning. With the development of deep neural network, deep learning approach is the state of the art of this problem. The main mission of image captioning is to automatically generate an image's description, which requires our understanding about content of images. In the past, there are some end-to-end models which were introduced such as: GoogleNIC ([show and tell](https://arxiv.org/pdf/1411.4555.pdf)), MontrealNIC ([show attend and tell](https://arxiv.org/pdf/1502.03044.pdf)), [LRCN](https://arxiv.org/pdf/1411.4389.pdf), [mRNN](https://arxiv.org/pdf/1410.1090.pdf), they are called inject-model with idea is give image feature throught RNN. In 2017, Marc Tanti, et al. introduce their [paper](https://arxiv.org/pdf/1708.02043.pdf) **What is the Role of Recurrent Neural Networks (RNNs) in an Image Caption Generator?** with merge-model. The main idea of this model is separate CNN and RNN, with only merge their ouput at the end and predicted by softmax layer. Base on it, we develop our model to generate image caption. 
 
 ### I. Main Idea:
 * Combine ConvNet with LSTM
-* Deep ConvNet as encoder
-* Language LSTM as decoder
+* Deep ConvNet as image encoder
+* Language LSTM as text encoder
+* Fully connected layer as decoder
 * End-to-end model I -> S
 * Maximize P(S|I)
 
 ### II. Dataset: 
-[Flickr 8k](https://forms.illinois.edu/sec/1713398). 
+[Flickr 8k](https://forms.illinois.edu/sec/1713398).  Train/val/test 6:1:1.
 The definitive description of the dataset is in the paper “Framing Image Description as a Ranking Task: Data, Models and Evaluation Metrics” from 2013.
 
 The authors describe the dataset as follows:
@@ -38,10 +39,10 @@ The authors describe the dataset as follows:
 
 ### V. Tuning hyperparameters:
 > ### Encoder ConvNet:
-* VGG16: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model)
-* **Resnet50**: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-resnet50)
-* Densenet121: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-densenet121)
-* Inceptionv3: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-inceptionv3)
+* VGG16
+* **Resnet50**
+* Densenet121
+* Inceptionv3
 
 => Validate encoder: [kaggle-kernel](https://www.kaggle.com/damminhtien/validation-model) 
 
@@ -56,6 +57,7 @@ The authors describe the dataset as follows:
 * Adam: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-resnet50)
 * Nadam: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-densenet121-nadam)
 * RMSprop: 
+* Sgd:
 
 ### VI. Evaluation and result:
 > **We use BLEU-score which is evaluate metric:**
@@ -72,12 +74,15 @@ The authors describe the dataset as follows:
 > ### Report comming soon!
 
 ### Reference
-+ [[1](https://arxiv.org/pdf/1502.03044.pdf)] Kelvin Xu, Jimmy Lei Ba, Ryan Kiros, Kyunghyun Cho, Aaron Courville, Ruslan Salakhutdinov, Richard S. Zemel, Yoshua Bengio. Show, Attend and Tell: Neural Image Caption Generation with Visual Attention. arXiv preprint arXiv:1502.03044, 2016.
-+ [[2](https://cs.stanford.edu/people/karpathy/deepimagesent/)] Andrej Karpathy, Li Fei-Fei Deep Visual-Semantic Alignments for Generating Image Descriptions. arXiv preprint arXiv:1412.2306, 2015.
-+ [[3](https://arxiv.org/pdf/1411.4555.pdf)] O. Vinyals, A. Toshev, S. Bengio, and D. Erhan. Show and tell: A neural image caption generator. arXiv preprint arXiv:1411.4555, 2014.
-+ [[4](https://vision.cornell.edu/se3/wp-content/uploads/2018/03/1501.pdf)] Yin Cui, Guandao Yang, Andreas Veit, Xun Huang, Serge Belongie. Learning to Evaluate Image Captioning.
-+ [[5](https://arxiv.org/pdf/1410.1090.pdf)] Junhua Mao, Wei Xu, Yi Yang, Jiang Wang, Alan L. Yuille. Explain Images with Multimodal Recurrent Neural Networks. arXiv preprint arXiv:1410.1090, 2014.
-+ [[6](https://arxiv.org/pdf/1411.4389.pdf)] Jeff Donahue, Lisa Anne Hendricks, Marcus Rohrbach, Subhashini Venugopalan, Sergio Guadarrama, Kate Saenko, Trevor Darrell. Long-term Recurrent Convolutional Networks for Visual Recognition and Description. arXiv preprint arXiv:1411.4389, 2016.
-+ [[7](https://arxiv.org/pdf/1411.4389.pdf)] Xinlei Chen, C. Lawrence Zitnick. Learning a Recurrent Visual Representation for Image Caption Generation. arXiv preprint arXiv:1411.5654, 2016.
++ [[1](https://arxiv.org/pdf/1703.09137.pdf)] Marc Tanti, Albert Gatt. Where to put the Image in an Image Caption Generator. arXiv preprint arXiv:1703.09137, 2018.
++ [[3](https://arxiv.org/pdf/1708.02043.pdf)]Marc Tanti, Albert Gatt, Kenneth P. Camilleri. What is the Role of Recurrent Neural Networks (RNNs) in an Image Caption Generator? arXiv preprint arXiv:1708.02043, 2017.
++ [[3](https://arxiv.org/pdf/1502.03044.pdf)] Kelvin Xu, Jimmy Lei Ba, Ryan Kiros, Kyunghyun Cho, Aaron Courville, Ruslan Salakhutdinov, Richard S. Zemel, Yoshua Bengio. Show, Attend and Tell: Neural Image Caption Generation with Visual Attention. arXiv preprint arXiv:1502.03044, 2016.
++ [[4](https://cs.stanford.edu/people/karpathy/deepimagesent/)] Andrej Karpathy, Li Fei-Fei Deep Visual-Semantic Alignments for Generating Image Descriptions. arXiv preprint arXiv:1412.2306, 2015.
++ [[5](https://arxiv.org/pdf/1411.4555.pdf)] O. Vinyals, A. Toshev, S. Bengio, and D. Erhan. Show and tell: A neural image caption generator. arXiv preprint arXiv:1411.4555, 2014.
++ [[6](https://vision.cornell.edu/se3/wp-content/uploads/2018/03/1501.pdf)] Yin Cui, Guandao Yang, Andreas Veit, Xun Huang, Serge Belongie. Learning to Evaluate Image Captioning.
++ [[7](https://arxiv.org/pdf/1410.1090.pdf)] Junhua Mao, Wei Xu, Yi Yang, Jiang Wang, Alan L. Yuille. Explain Images with Multimodal Recurrent Neural Networks. arXiv preprint arXiv:1410.1090, 2014..
++ [[8](https://arxiv.org/pdf/1411.4389.pdf)] Xinlei Chen, C. Lawrence Zitnick. Learning a Recurrent Visual Representation for Image Caption Generation. arXiv preprint arXiv:1411.5654, 2016.
 
+
+### > Happy trainning :tada: and please vote :star: if it help!
 
