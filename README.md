@@ -1,6 +1,8 @@
 # Deep Learning Image Caption Generator
 > ## Deep CNN-LSTM for Generating Image Descriptions :smiling_imp:
-**Key words**: Image captioning, image description generator, explain image, merge model, deep learning, lstm, rnn, cnn, word by word, word embeding.
+**Key words**: Image captioning, image description generator, explain image, merge model, deep learning, long-short term memory, recurrent neural network, convolutional neural network, word by word, word embeding, bleu score.
+
+**Related works**: Deep model for computer vision and natural language, Image-sentence retrieval, Generating novel sentence descriptions for images.
 
 #### Abstract
 Image captioning is a very interesting problem in machine learning. With the development of deep neural network, deep learning approach is the state of the art of this problem. The main mission of image captioning is to automatically generate an image's description, which requires our understanding about content of images. In the past, there are some end-to-end models which were introduced such as: GoogleNIC ([show and tell](https://arxiv.org/pdf/1411.4555.pdf)), MontrealNIC ([show attend and tell](https://arxiv.org/pdf/1502.03044.pdf)), [LRCN](https://arxiv.org/pdf/1411.4389.pdf), [mRNN](https://arxiv.org/pdf/1410.1090.pdf), they are called inject-model with idea is give image feature throught RNN. In 2017, Marc Tanti, et al. introduce their [paper](https://arxiv.org/pdf/1708.02043.pdf) **What is the Role of Recurrent Neural Networks (RNNs) in an Image Caption Generator?** with merge-model. The main idea of this model is separate CNN and RNN, with only merge their ouput at the end and predicted by softmax layer. Base on it, we develop our model to generate image caption. 
@@ -14,7 +16,8 @@ Image captioning is a very interesting problem in machine learning. With the dev
 * Maximize P(S|I)
 
 ### II. Dataset: 
-[Flickr 8k](https://forms.illinois.edu/sec/1713398).  Train/val/test 6:1:1.
+[Flickr 8k](https://forms.illinois.edu/sec/1713398), train/val/test 6:1:1.
+
 The definitive description of the dataset is in the paper “Framing Image Description as a Ranking Task: Data, Models and Evaluation Metrics” from 2013.
 
 The authors describe the dataset as follows:
@@ -84,5 +87,4 @@ The authors describe the dataset as follows:
 + [[8](https://arxiv.org/pdf/1411.4389.pdf)] Xinlei Chen, C. Lawrence Zitnick. Learning a Recurrent Visual Representation for Image Caption Generation. arXiv preprint arXiv:1411.5654, 2016.
 
 
-### > Happy trainning :tada: and please vote :star: if it help!
-
+> ### Happy trainning :tada: and please vote :star: if it help! 
