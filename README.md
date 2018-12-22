@@ -29,14 +29,13 @@ The authors describe the dataset as follows:
 ### III. Baseline Model:
 
 <p align="center">
-  <img src="https://i.imgur.com/1DxxbyK.png" />
+  <img src="https://i.imgur.com/rDGYTBH.png" />
 </p>
 
 ### IV. Implement code:
 1. Load images and extract feature: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-resnet50)
 2. Load text data: [kaggle-kernel](https://www.kaggle.com/damminhtien/text-data-exploxe)
-3. Develop model and training: [kaggle-kernel](https://www.kaggle.com/damminhtien/visualization-development-model-resnet50)
-5. Validate model: [kaggle-kernel](https://www.kaggle.com/damminhtien/validation-model)
+3. Develop model and training: [kaggle-kernel](https://www.kaggle.com/damminhtien/validation-model)
 4. Evaluation model: [kaggle-kernel](https://www.kaggle.com/damminhtien/evaluate-model)
 5. Generator caption for new images: [kaggle-kernel](https://www.kaggle.com/damminhtien/generation-caption-for-new-image)
 
