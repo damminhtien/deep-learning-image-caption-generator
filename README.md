@@ -35,7 +35,7 @@ The authors describe the dataset as follows:
 ### IV. Implement code:
 1. Load images and extract feature: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-resnet50)
 2. Load text data: [kaggle-kernel](https://www.kaggle.com/damminhtien/text-data-exploxe)
-3. Develop model and training: [kaggle-kernel](https://www.kaggle.com/damminhtien/validation-model)
+3. Develop model and training: [kaggle-kernel](https://www.kaggle.com/damminhtien/visualization-development-model-resnet50)
 4. Evaluation model: [kaggle-kernel](https://www.kaggle.com/damminhtien/evaluate-model)
 5. Generator caption for new images: [kaggle-kernel](https://www.kaggle.com/damminhtien/generation-caption-for-new-image)
 
@@ -46,18 +46,9 @@ The authors describe the dataset as follows:
 * Densenet121
 * Inceptionv3
 
-=> Validate encoder: [kaggle-kernel](https://www.kaggle.com/damminhtien/validation-model) 
-
-|             | Total params | Time traning/epoch (s) | Loss after 20 epochs | Validate BLEU-score  (1,2,3,4))        | Test BLEU-score                        |
-|-------------|--------------|------------------------|----------------------|----------------------------------------|----------------------------------------|
-| **VGG16**       | 5,527,963    | 710                    | -                    | 0.511467, 0.266939, 0.181932, 0.082392 | 0.518338, 0.271969, 0.186073, 0.087395 |
-| **ResNet50**    | 5,003,675    | **700**                    | 2,8957               | **0.528901, 0.278742, 0.191589, 0.087502** | **0.542805, 0.301714, 0.207351, 0.095704** |
-| **Inceptionv3** | 5,003,675    | 705                    | 2.8934               | 0.518100, 0.270983, 0.182362, 0.081367 | -                                      |
-| **DenseNet121** | **4,741,5319**    | 747                    | **2.8243**               | 0.521044, 0.242391, 0.153286, 0.066571 | -                                      |
-
 > ### Optimizer
-* Adam: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-resnet50)
-* Nadam: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-densenet121-nadam)
+* **Adam**: 
+* Nadam: 
 * RMSprop: 
 * Sgd:
 
