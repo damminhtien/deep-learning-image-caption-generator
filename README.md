@@ -33,7 +33,7 @@ The authors describe the dataset as follows:
 </p>
 
 ### IV. Implement code:
-1. Load images and extract feature: [kaggle-kernel](https://www.kaggle.com/damminhtien/development-model-resnet50)
+1. Load images and extract feature: [kaggle-kernel](https://www.kaggle.com/damminhtien/flirck-8k-dataset-explore-image)
 2. Load text data: [kaggle-kernel](https://www.kaggle.com/damminhtien/text-data-exploxe)
 3. Develop model and training: [kaggle-kernel](https://www.kaggle.com/damminhtien/visualization-development-model-resnet50)
 4. Evaluation model: [kaggle-kernel](https://www.kaggle.com/damminhtien/evaluate-model)
